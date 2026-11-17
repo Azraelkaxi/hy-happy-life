@@ -1,0 +1,23 @@
+[Unit]
+Description=hy-happy-life - 小吴小王的幸福生活
+After=network.target
+
+[Service]
+Type=simple
+User=www
+Group=www
+WorkingDirectory=/www/apps/hy-happy-life/app
+Environment=NODE_ENV=production
+EnvironmentFile=/www/apps/hy-happy-life/.env
+ExecStart=/usr/local/bin/node server/index.mjs
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/www/apps/hy-happy-life/data /www/apps/hy-happy-life/logs
+StandardOutput=append:/www/apps/hy-happy-life/logs/app.log
+StandardError=append:/www/apps/hy-happy-life/logs/error.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FFF8F2" />
+  <meta name="description" content="小吴小王的幸福生活 · 只属于我们的计划表。把想一起做的事，一件件变成回忆。" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="幸福生活" />
+  <title>小吴小王的幸福生活</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/app.css?v=2" />
+  <script type="module" src="/app.js?v=2"></script>
+</head>
+<body class="booting">
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 20.4s-7.6-4.8-7.6-10A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 7.6 3.1c0 5.2-7.6 10-7.6 10Z" fill="currentColor" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="3" />
+      <path d="M8 3v4M16 3v4M3 10h18" />
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+      <path d="m3 12 9 5 9-5M3 17l9 5 9-5" />
+    </symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8.5 12.2 2.4 2.4 4.6-5" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12.5 4.5 4.5L19 7" />
+    </symbol>
+    <symbol id="i-grip" viewBox="0 0 24 24">
+      <circle cx="9" cy="6" r="1.35" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="6" r="1.35" fill="currentColor" stroke="none" />
+      <circle cx="9" cy="12" r="1.35" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="12" r="1.35" fill="currentColor" stroke="none" />
+      <circle cx="9" cy="18" r="1.35" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="18" r="1.35" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6" />
+    </symbol>
+    <symbol id="i-note" viewBox="0 0 24 24">
+      <path d="M12 20h9" />
+      <path d="M16.6 3.6a2.1 2.1 0 0 1 3 3L7 19.2l-4 1.1 1.1-4L16.6 3.6Z" />
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24">
+      <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.2-3.2" />
+    </symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3.2" />
+      <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z" />
+    </symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" />
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" />
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="4" y="10" width="16" height="11" rx="3" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24">
+      <path d="M3 3l18 18" />
+      <path d="M10.6 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3 4M6.6 6.7A17 17 0 0 0 2 12s3.6 7 10 7a10.8 10.8 0 0 0 4.1-.8" />
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 3c.7 4.6 2.4 6.3 7 7-4.6.7-6.3 2.4-7 7-.7-4.6-2.4-6.3-7-7 4.6-.7 6.3-2.4 7-7Z" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24">
+      <path d="M3 11a8 8 0 0 1 13.7-5.6L21 9M21 4v5h-5M21 13a8 8 0 0 1-13.7 5.6L3 15M3 20v-5h5" />
+    </symbol>
+  </svg>
+
+  <div id="bootScreen" class="boot-screen">
+    <div class="boot-heart">♡</div>
+    <p>正在打开我们的小日子…</p>
+  </div>
+
+  <section id="loginView" class="login-view" aria-label="登录" hidden>
+    <div class="login-bg" aria-hidden="true">
+      <span class="glow glow-a"></span>
+      <span class="glow glow-b"></span>
+      <span class="glow glow-c"></span>
+      <div id="loginHearts" class="login-hearts"></div>
+    </div>
+
+    <div class="login-wrap">
+      <div class="login-poem" aria-hidden="true">
+        <p class="poem-eyebrow">OUR LITTLE LIFE</p>
+        <p class="poem-line">把想一起做的事<br />一件件变成回忆</p>
+        <p class="poem-sign">小吴 &amp; 小王</p>
+        <div class="poem-rule"><span></span><i>♡</i><span></span></div>
+      </div>
+
+      <div class="login-card" id="loginCard">
+        <div class="login-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><use href="#i-heart"></use></svg>
+          </span>
+          <div class="login-brand-text">
+            <span class="login-brand-kicker">小吴 &amp; 小王</span>
+            <h1>幸福生活</h1>
+          </div>
+        </div>
+        <p class="login-sub">把普通的日子，过成我们喜欢的样子。</p>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <label class="field">
+            <span>账号</span>
+            <div class="input-wrap">
+              <svg aria-hidden="true"><use href="#i-user"></use></svg>
+              <input id="loginUser" name="username" type="text" value="hy" autocomplete="username" autocapitalize="off" spellcheck="false" required />
+            </div>
+          </label>
+          <label class="field">
+            <span>密码</span>
+            <div class="input-wrap">
+              <svg aria-hidden="true"><use href="#i-lock"></use></svg>
+              <input id="loginPass" name="password" type="password" autocomplete="current-password" placeholder="只属于我们的暗号" required />
+              <button type="button" class="pass-toggle" id="togglePass" aria-label="显示密码">
+                <svg aria-hidden="true"><use href="#i-eye"></use></svg>
+              </button>
+            </div>
+          </label>
+          <p id="loginError" class="form-error" role="alert" aria-live="polite"></p>
+          <button class="btn btn-primary btn-block" type="submit" id="loginBtn">
+            <span>进入我们的小日子</span>
+            <svg class="btn-heart" aria-hidden="true"><use href="#i-heart"></use></svg>
+          </button>
+        </form>
+
+        <p class="login-foot"><span class="tiny-heart">♡</span> 只属于我们的秘密基地</p>
+      </div>
+    </div>
+
+    <p class="login-credit">Made with love · 小吴 &amp; 小王</p>
+  </section>
+
+  <div id="appView" class="app-shell" hidden>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark brand-mark-sm" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><use href="#i-heart"></use></svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-kicker">小吴 &amp; 小王</span>
+          <span class="brand-name">幸福生活</span>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="任务分类">
+        <button type="button" class="nav-item" data-filter="today">
+          <svg aria-hidden="true"><use href="#i-sun"></use></svg>
+          <span>今天</span>
+          <em data-count="today">0</em>
+        </button>
+        <button type="button" class="nav-item" data-filter="planned">
+          <svg aria-hidden="true"><use href="#i-calendar"></use></svg>
+          <span>计划</span>
+          <em data-count="planned">0</em>
+        </button>
+        <button type="button" class="nav-item" data-filter="all">
+          <svg aria-hidden="true"><use href="#i-layers"></use></svg>
+          <span>全部</span>
+          <em data-count="all">0</em>
+        </button>
+        <button type="button" class="nav-item" data-filter="done">
+          <svg aria-hidden="true"><use href="#i-check-circle"></use></svg>
+          <span>已完成</span>
+          <em data-count="done">0</em>
+        </button>
+      </nav>
+
+      <div class="love-card">
+        <div class="love-card-top">
+          <span>我们的小日子</span>
+          <svg aria-hidden="true"><use href="#i-heart"></use></svg>
+        </div>
+        <button type="button" id="anniversaryBtn" class="anniversary" title="设置纪念日">
+          <span class="anniversary-number">
+            <b id="anniversaryDays">＋</b>
+            <i id="anniversaryUnit">设置</i>
+          </span>
+          <span id="anniversaryLabel" class="anniversary-label">我们的纪念日</span>
+        </button>
+        <p id="dailyQuote" class="daily-quote"></p>
+      </div>
+
+      <div class="side-foot">
+        <button type="button" id="settingsBtn" class="user-chip" title="设置">
+          <span class="avatar" aria-hidden="true">吴</span>
+          <span class="user-meta">
+            <b>hy</b>
+            <small>我们的小账号</small>
+          </span>
+          <svg class="user-gear" aria-hidden="true"><use href="#i-settings"></use></svg>
+        </button>
+        <button type="button" id="logoutBtn" class="icon-btn logout-btn" title="退出登录" aria-label="退出登录">
+          <svg aria-hidden="true"><use href="#i-logout"></use></svg>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="hello">
+          <p class="eyebrow" id="dateLine">今天</p>
+          <h2><span id="greeting">你好呀</span>，小吴 &amp; 小王 <span class="heart-pop">♡</span></h2>
+          <p class="hello-sub" id="helloSub">今天也要把小日子过得甜甜的</p>
+        </div>
+        <div class="progress-card" aria-label="今日进度">
+          <div class="ring" id="progressRing">
+            <div class="ring-inner"><b id="progressValue">0%</b></div>
+          </div>
+          <div class="progress-text">
+            <span>今日进度</span>
+            <b id="progressLabel">0 / 0</b>
+          </div>
+        </div>
+      </header>
+
+      <div class="quote-bar">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p id="heroQuote">把喜欢的事，慢慢做成我们的日常。</p>
+        <svg class="quote-spark" aria-hidden="true"><use href="#i-spark"></use></svg>
+      </div>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <span class="composer-plus" aria-hidden="true">
+          <svg><use href="#i-plus"></use></svg>
+        </span>
+        <input id="taskInput" type="text" maxlength="240" placeholder="今天想和小王一起做点什么？" aria-label="新任务" enterkeyhint="done" />
+        <button type="button" id="composeDueBtn" class="compose-due" title="安排时间">
+          <svg aria-hidden="true"><use href="#i-calendar"></use></svg>
+          <span id="composeDueText">时间</span>
+        </button>
+        <button type="submit" class="btn-add" id="addBtn">
+          <span>记下</span>
+          <svg aria-hidden="true"><use href="#i-plus"></use></svg>
+        </button>
+      </form>
+      <p class="compose-hint" id="composeHint" aria-live="polite"></p>
+      <p class="composer-tips">
+        <span>小提示：直接输入「明天 19:00 吃火锅」也能识别时间</span>
+        <span class="tips-key"><kbd>Enter</kbd> 快速添加</span>
+      </p>
+
+      <div class="list-toolbar">
+        <div class="list-title">
+          <h3 id="listTitle">今天</h3>
+          <span class="soft-count" id="listCount"></span>
+        </div>
+        <label class="search">
+          <svg aria-hidden="true"><use href="#i-search"></use></svg>
+          <input id="searchInput" type="search" placeholder="找一件小事…" aria-label="搜索任务" />
+        </label>
+      </div>
+      <p class="list-sub" id="listSub">越靠上越重要 · 按住左侧拖动调整优先级</p>
+
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+
+      <section class="done-section" id="doneSection" hidden>
+        <div class="done-head">
+          <button type="button" class="done-toggle" id="doneToggle" aria-expanded="false">
+            <svg aria-hidden="true"><use href="#i-chevron"></use></svg>
+            <span>已完成</span>
+            <em id="doneCount">0</em>
+          </button>
+          <button type="button" class="text-btn danger" id="clearDoneBtn">清除记录</button>
+        </div>
+        <ul id="doneList" class="done-list" hidden></ul>
+      </section>
+
+      <p class="app-foot">
+        <span>小吴 &amp; 小王的小星球</span>
+        <span class="foot-dot">·</span>
+        <span>每一件小事都算数</span>
+      </p>
+    </main>
+
+    <nav class="mobile-nav" aria-label="移动端任务分类">
+      <button type="button" data-filter="today">
+        <svg aria-hidden="true"><use href="#i-sun"></use></svg>
+        <span>今天</span>
+      </button>
+      <button type="button" data-filter="planned">
+        <svg aria-hidden="true"><use href="#i-calendar"></use></svg>
+        <span>计划</span>
+      </button>
+      <button type="button" data-filter="all">
+        <svg aria-hidden="true"><use href="#i-layers"></use></svg>
+        <span>全部</span>
+      </button>
+      <button type="button" data-filter="done">
+        <svg aria-hidden="true"><use href="#i-check-circle"></use></svg>
+        <span>已完成</span>
+      </button>
+    </nav>
+
+    <button type="button" class="fab" id="fabAdd" aria-label="添加任务">
+      <svg aria-hidden="true"><use href="#i-plus"></use></svg>
+    </button>
+  </div>
+
+  <div id="duePopover" class="due-popover" role="dialog" aria-label="安排时间" hidden>
+    <div class="pop-head">
+      <b>安排一个时间</b>
+      <button type="button" class="icon-btn" id="dueClose" aria-label="关闭">
+        <svg aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="quick-row">
+      <button type="button" data-quick="today">今天</button>
+      <button type="button" data-quick="tomorrow">明天</button>
+      <button type="button" data-quick="after">后天</button>
+      <button type="button" data-quick="weekend">周末</button>
+      <button type="button" data-quick="nextweek">下周一</button>
+    </div>
+    <div class="due-fields">
+      <label>日期<input type="date" id="dueDate" /></label>
+      <label>时间<input type="time" id="dueTime" /></label>
+    </div>
+    <div class="pop-actions">
+      <button type="button" class="text-btn danger" id="dueClear">清除时间</button>
+      <button type="button" class="btn btn-primary btn-sm" id="dueSave">保存</button>
+    </div>
+  </div>
+
+  <div id="noteModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+      <header>
+        <h3 id="noteTitle">给这件小事加点备注</h3>
+        <button type="button" class="icon-btn" data-close aria-label="关闭">
+          <svg aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <p class="modal-task-title" id="noteTaskTitle"></p>
+      <textarea id="noteInput" maxlength="4000" rows="5" placeholder="比如：想去的店、要买的东西、想说的话…"></textarea>
+      <footer>
+        <button type="button" class="text-btn" data-close>取消</button>
+        <button type="button" class="btn btn-primary btn-sm" id="noteSave">保存备注</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="settingsModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <header>
+        <h3 id="settingsTitle">我们的小设置</h3>
+        <button type="button" class="icon-btn" data-close aria-label="关闭">
+          <svg aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <label class="field">
+        <span>我们在一起的纪念日</span>
+        <div class="input-wrap plain">
+          <input type="date" id="anniversaryInput" />
+        </div>
+      </label>
+      <p class="field-note">设置后会显示「在一起 N 天」，只保存在我们的服务器上。</p>
+      <div class="settings-account">
+        <div class="settings-user">
+          <span class="avatar" aria-hidden="true">吴</span>
+          <span class="user-meta"><b>hy</b><small>当前账号</small></span>
+        </div>
+        <button type="button" class="text-btn danger" id="settingsLogout">退出登录</button>
+      </div>
+      <footer>
+        <button type="button" class="btn btn-primary btn-sm" id="settingsSave">保存</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="confirmModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card modal-card-sm" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <header>
+        <h3 id="confirmTitle">确认一下</h3>
+        <button type="button" class="icon-btn" data-close aria-label="关闭">
+          <svg aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <p class="confirm-text" id="confirmText"></p>
+      <footer>
+        <button type="button" class="text-btn" id="confirmCancel">再想想</button>
+        <button type="button" class="btn btn-danger btn-sm" id="confirmOk">确定</button>
+      </footer>
+    </div>
+  </div>
+
+  <div id="toastHost" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+
+  <noscript>
+    <div class="noscript">这个页面需要 JavaScript 才能打开我们的小日子。</div>
+  </noscript>
+</body>
+</html>

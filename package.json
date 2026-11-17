@@ -1,0 +1,15 @@
+{
+  "name": "hy-happy-life",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "小吴小王的幸福生活 · 只属于我们的计划表",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "node --watch server/index.mjs",
+    "hash-password": "node scripts/hash-password.mjs"
+  }
+}
